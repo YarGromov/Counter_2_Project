@@ -46,17 +46,6 @@
     font-size: 55px;
 }
 
-.incorrectValue {
-    color: red;
-    font-size: 40px;
-}
-
-.enterValue {
-    color: #6ddffa;
-    font-size: 25px;
-    font-weight: bold;
-}
-
 .resultNumValueStyle {
     color: #6ddffa;
     font-size: 55px;

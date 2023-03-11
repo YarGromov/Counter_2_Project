@@ -1,4 +1,3 @@
-
 export type CountStateType = {
     count: number | undefined
     maxValue: number

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import s from "./ScreenWithResults.module.css";
 import {AppRootStateType} from "../state/store";
 import {useDispatch, useSelector} from "react-redux";
@@ -9,9 +9,9 @@ export const INCREMENT = 'INCREMENT'
 export const RESET = 'RESET'
 export const SETTINGS_RENDER = 'SETTINGS_RENDER'
 
-export const ScreenWithResultsMemo = React.memo(function ScreenWithResults(){
-    const [show, setShow] = useState('Enter values and press "set"')
-    const [render, setRender] =  useState(true)
+export const ScreenWithResultsMemo = React.memo(function ScreenWithResults() {
+
+    const [render, setRender] = useState(true)
 
 
     const dispatch = useDispatch()
@@ -28,20 +28,13 @@ export const ScreenWithResultsMemo = React.memo(function ScreenWithResults(){
     }
 
     const getStyleForCount = () => {
-        if (show !== 'Incorrect value!' && show !== 'Enter values and press "set"' && maxValue === count) {
+        if (maxValue === count) {
             return s.finalNumericValue
         }
-        if (show !== 'Incorrect value!' && show !== 'Enter values and press "set"' && maxValue !== count) {
+        if (maxValue !== count) {
             return s.resultNumValueStyle
         }
     }
-
-    useEffect(() => {
-        if (count || count === 0) {
-            setShow(count.toString())
-        }
-
-    }, [count])
 
 
     const incDisabled = !!count && maxValue <= count || count === undefined || maxValue === onInputValue;

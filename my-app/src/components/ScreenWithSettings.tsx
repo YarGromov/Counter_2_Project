@@ -21,7 +21,6 @@ export const ScreenWithSettingsMemo = React.memo(function ScreenWithSettings() {
     const dispatch = useDispatch();
 
 
-
     const maxValueInputStyles = () => {
         if (maxValue < 0) {
             return s.incorrectFirstContainer
