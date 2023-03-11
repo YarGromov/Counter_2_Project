@@ -1,0 +1,60 @@
+.ScreenWithSettings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+}
+
+.firstContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 370px;
+    height: 150px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+    color: #66e3fc;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.firstContainer input {
+    margin-left: 20px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid #a2ddec;
+    border-radius: 5px;
+}
+
+.incorrectFirstContainer input {
+    margin-left: 20px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid #a2ddec;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.secondContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 370px;
+    height: 100px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+}
+
+.secondContainer button {
+    background-color: #6ddffb;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+    height: 45px;
+    width: 100px;
+    font-size: 30px;
+}

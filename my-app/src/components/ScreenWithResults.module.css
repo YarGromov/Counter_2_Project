@@ -1,0 +1,64 @@
+.ScreenWithResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+}
+
+.firstContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 370px;
+    height: 150px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+    color: #6ddffa;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.secondContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 370px;
+    height: 100px;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+}
+
+.secondContainer button {
+    background-color: #6ddffb;
+    border: 2px solid #a2ddec;
+    border-radius: 10px;
+    height: 45px;
+    width: 100px;
+    font-size: 30px;
+}
+
+.finalNumericValue{
+    color:red;
+    font-size: 55px;
+}
+
+.incorrectValue {
+    color: red;
+    font-size: 40px;
+}
+
+.enterValue {
+    color: #6ddffa;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.resultNumValueStyle {
+    color: #6ddffa;
+    font-size: 55px;
+    font-weight: bold;
+}
