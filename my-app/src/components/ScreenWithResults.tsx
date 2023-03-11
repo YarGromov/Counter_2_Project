@@ -28,12 +28,6 @@ export const ScreenWithResultsMemo = React.memo(function ScreenWithResults(){
     }
 
     const getStyleForCount = () => {
-        if (show === 'Incorrect value!') {
-            return s.incorrectValue
-        }
-        if (show === 'Enter values and press "set"') {
-            return s.enterValue
-        }
         if (show !== 'Incorrect value!' && show !== 'Enter values and press "set"' && maxValue === count) {
             return s.finalNumericValue
         }
@@ -45,24 +39,10 @@ export const ScreenWithResultsMemo = React.memo(function ScreenWithResults(){
     useEffect(() => {
         if (count || count === 0) {
             setShow(count.toString())
-            if (onInputValue && onInputValue < 0) {
-                setShow('Incorrect value!')
-            }
-        } else if (onInputValue && onInputValue < 0) {
-            setShow('Incorrect value!')
-        } else if (onInputValue && onInputValue >= 0) {
-            setShow('Enter values and press "set"')
         }
-        if (onInputValue && onInputValue >= maxValue) {
-            setShow('Incorrect value!')
-        }
-        if (onInputValue && onInputValue > maxValue) {
-            setShow('Incorrect value!')
-        }
-        if (maxValue < 0) {
-            setShow('Incorrect value!')
-        }
-    }, [count, onInputValue, maxValue])
+
+    }, [count])
+
 
     const incDisabled = !!count && maxValue <= count || count === undefined || maxValue === onInputValue;
     const resetDisabled = (count === onInputValue) || (onInputValue !== undefined && onInputValue > maxValue) || maxValue === onInputValue;
@@ -74,7 +54,7 @@ export const ScreenWithResultsMemo = React.memo(function ScreenWithResults(){
     return (
         <div className={s.ScreenWithResults}>
             <div className={s.firstContainer}>
-                <div className={getStyleForCount()}>{show}</div>
+                <div className={getStyleForCount()}>{count}</div>
             </div>
             <div className={s.secondContainer}>
                 <UniversalButton name={'inc'} callback={incrementFunc} disabled={incDisabled}/>
